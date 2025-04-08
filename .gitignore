@@ -3,4 +3,4 @@
 
 # Don't ingore
 !.gitignore
-!*.tex
+!travelers_notebook/*.tex
