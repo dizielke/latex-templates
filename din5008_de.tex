@@ -1,0 +1,56 @@
+\documentclass[
+  paper=a4,
+  parskip=full,
+  fromalign=right,
+  fromphone=on,
+  fromemail=on,
+  fromurl=on,
+  addrfield=on,
+  backaddress=on,
+  subject=beforeopening,
+  foldmarks=on,
+]{scrlttr2}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{blindtext}
+\usepackage[T1]{fontenc}
+\usepackage[singlespacing]{setspace}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{lmodern}
+\renewcommand*\familydefault{\ttdefault}
+\usepackage[T1]{fontenc}
+
+\LoadLetterOption{DIN}
+\setkomavar{fromname}{Mr. Person}
+\setkomavar{fromaddress}{Way Road 13\\12345 Villageburgh}
+\setkomavar{fromphone}[Tel.: ]{+49 123 4567890}
+\setkomavar{fromemail}[Mail: ]{persival.person@fancymail.test}
+\setkomavar{fromurl}[Web: ]{http://www.fancymail.test}
+\setkomavar{backaddressseparator}{\enspace\textperiodcentered\enspace}
+\setkomavar{signature}{Persival Person}
+\setkomavar{place}{Villageburgh}
+\setkomavar{date}{den \today\renewcaptionname{ngerman}{\enclname}{Anlagen}}
+\setkomavar{enclseparator}{ }
+
+\renewcaptionname{ngerman}{\enclname}{\textbf{Anlagen:}}
+
+\addtokomafont{subject}{\bfseries}
+\setkomafont{backaddress}{\default}
+\renewcommand*{\raggedsignature}{\raggedright}
+
+\begin{document}
+\begin{letter}{Firma GmbH\\ Herr Ansprechpartner\\ Straßenweg 12\\12345 Dorfstadt\\GERMANY}
+\setkomavar{subject}{Betreff}
+
+\opening{Sehr geehrte Damen und Herren,}
+\begin{onehalfspace}
+hier soll der Text stehen.\\
+Eine weitere Zeile \\
+Und noch eine Zeile.
+\closing{Mit freundlichen Grüßen}
+
+\ps PS: \dots
+\end{onehalfspace}
+\encl{Test1\\ Test2}
+\end{letter}
+\end{document}
